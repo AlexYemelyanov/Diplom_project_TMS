@@ -1,8 +1,19 @@
 import { useLayoutEffect } from "react";
 import styles from './styles.module.scss';
+import { useAppDispatch, useAppSelector } from "../../shared/hooks";
+import { themeSelector } from "../../redux/selectors";
+import { toggleTheme } from "../../redux";
 
 
-export const ToogleThemeBtn => () => {
+export const ToggleThemeBtn = () => {
+
+  const { theme } = useAppSelector(themeSelector)
+  const dispatch = useAppDispatch();
+
+  const toggleThemeMode = () => {
+    dispatch(toggleTheme())
+  }
+
 
   useLayoutEffect(() => {
     const root = window.document.documentElement;

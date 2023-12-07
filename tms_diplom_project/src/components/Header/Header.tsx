@@ -1,15 +1,25 @@
 import { Link, NavLink, useNavigate} from 'react-router-dom';
+import { authSelector } from '../../redux';
 import styles from './styles.module.scss';
+import { useAppDispatch, useAppSelector } from '../../shared/hooks';
+import { ToggleThemeBtn }  from '../ToggleThemeBtn';
 import { Button } from '../Button';
 import Logo from '../../assets/Logo.svg'
+import { signOut } from '../../redux';
 
 
 export const Header = () => {
   const navigate = useNavigate()
+  const { user } = useAppSelector(authSelector)
+  const dispatch = useAppDispatch
 
 
-
-
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to sign out?')) {
+      dispatch(signOut());
+      navigate('/');
+    }
+  };
 
   return (
     <header className={styles.header}>

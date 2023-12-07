@@ -1,0 +1,35 @@
+  .login__auth{
+    margin: 0 auto;
+    &_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .login__auth_input {
+        border: 1px solid var(--body-bg-color);
+
+      }
+      button {
+        color: var(--font-color);
+        background-color: var(--body-bg-color);
+        padding: 10px 10px;
+        &:hover {
+          background-color: #3ccc11;
+          border: 1px solid #3ccc11;
+          color: #f8f8f8;
+        }
+        &:active {
+          background-color: #ccb911;
+          border: 1px solid #ccc011;
+          color: #f8f8f8;
+        }
+      }
+      input {
+        font-family: 'Playpen Sans', cursive;
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+    }
+  }
