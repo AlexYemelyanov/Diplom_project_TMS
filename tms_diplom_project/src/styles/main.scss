@@ -1,0 +1,75 @@
+
+@import './reset.scss';
+@import '../components/Todoboard/index.css';
+
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-rose-900 rounded-xl;
+}
+
+:root {
+  --font-color: #000;
+  --body-bg-color: #fff;
+  --column-bg: #adadad;
+  --task-dragging: #8b8b8b;
+  --column-bg-title: #8b8b8b;
+  --column-title-font-color: #fff;
+  --radius: 10px;
+  --border: 1px solid #000;
+  --placeholder-color: #000;
+  --card-color: #fff;
+
+}
+:root[data-theme='dark'] {
+  --font-color: #fff;
+  --body-bg-color: #000;
+  --column-bg: #222222;
+  --column-bg-title: #1f1f1f;
+  --border: 1px solid #fff;
+  --placeholder-color: #fff;
+  --card-color: #5a5959;
+}
+
+body {
+  font-family: 'Playpen Sans', cursive;
+  background-color: var(--body-bg-color);
+  color: var(--font-color);
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: var(--radius);
+  border: 1px solid var(--font-color);
+  background-color: var(--body-bg-color);
+  color: var(--font-color);
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 700;
+  transition: border-color 0.25s;
+}
+button:hover {
+  background-color: #3ccc11;
+  border: 1px solid #3ccc11;
+  color: #f8f8f8;
+}
+button:active{
+  background-color: #ccb911;
+  border: 1px solid #ccc011;
+  color: #f8f8f8;
+}
+.App {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+  }
+}

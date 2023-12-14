@@ -1,0 +1,26 @@
+.header {
+    height: 100px;
+    z-index: 20;
+    // position: absolute;
+  &__container {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    width: 300px;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+  }
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+    }
+}
